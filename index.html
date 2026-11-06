@@ -5,35 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>渦虫技研 | 高専祭展示</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- レトロなドットフォントを読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DotGothic16', sans-serif;
+            background-color: #050505;
+            background-image: radial-gradient(#1f2937 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* ネオン発光エフェクト */
+        .neon-green { text-shadow: 0 0 10px rgba(74, 222, 128, 0.8), 0 0 20px rgba(74, 222, 128, 0.6); }
+        .neon-pink { text-shadow: 0 0 10px rgba(217, 70, 239, 0.8), 0 0 20px rgba(217, 70, 239, 0.6); }
+        .neon-yellow { text-shadow: 0 0 10px rgba(250, 204, 21, 0.8), 0 0 20px rgba(250, 204, 21, 0.6); }
+        /* 電光掲示板風の枠 */
+        .led-border { box-shadow: 0 0 15px rgba(239, 68, 68, 0.4), inset 0 0 15px rgba(239, 68, 68, 0.2); }
+        /* ハロ風の枠 */
+        .haro-border { box-shadow: 0 0 15px rgba(74, 222, 128, 0.4), inset 0 0 15px rgba(74, 222, 128, 0.2); }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans p-4 md:p-8">
-    <div class="max-w-2xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-lg">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">渦虫技研 高専祭展示</h1>
+<body class="text-gray-100 min-h-screen p-4 md:p-8">
+    <div class="max-w-3xl mx-auto">
+        
+        <!-- ヘッダー -->
+        <header class="text-center mb-12 mt-8">
+            <div class="inline-block border-4 border-gray-400 p-4 mb-4">
+                <h1 class="text-5xl md:text-6xl font-bold tracking-widest text-gray-200">
+                    渦虫技研
+                </h1>
+            </div>
+            <p class="text-gray-400 text-xl tracking-widest">uzumushi tech</p>
+        </header>
 
-        <div class="mb-8 border-b-2 border-gray-200 pb-6 text-center">
-            <p class="text-xl font-semibold text-gray-800">📍 展示場所: 3IHR教室</p>
-            <p class="text-md text-gray-600 mt-2">電子工作を用いたオリジナル作品を展示しています。</p>
+        <!-- ロケーション情報 -->
+        <div class="bg-black/60 border border-gray-700 p-6 rounded-lg mb-12 text-center backdrop-blur-sm">
+            <p class="text-2xl tracking-widest">
+                LOCATION &gt;&gt; <span class="neon-green text-green-400">3IHR (教養棟3F)</span>
+            </p>
         </div>
 
-        <div class="space-y-6">
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-md">
-                <h2 class="text-xl font-bold text-blue-900 flex items-center">
-                    💡 自作電光掲示板
-                </h2>
-                <p class="mt-2 text-gray-700">部品から組み上げたオリジナルの電光掲示板です。ハードウェアから制御プログラムまで一から製作しました。</p>
+        <!-- 展示内容 -->
+        <div class="space-y-12">
+            
+            <!-- 電光掲示板 -->
+            <div class="bg-black/80 border-2 border-red-900 p-6 rounded-xl flex flex-col md:flex-row items-center gap-6 led-border backdrop-blur-sm">
+                <!-- 画像配置枠（srcの中身を実際の画像ファイル名に変更してください） -->
+                <div class="w-full md:w-1/2 aspect-video bg-gray-800 flex items-center justify-center border border-red-500 overflow-hidden">
+                    <img src="ここに電光掲示板の画像.jpg" alt="電光掲示板" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                    <!-- 画像がない場合は以下のテキストが表示されます -->
+                    <span class="absolute text-red-500/50">NO IMAGE</span>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl text-red-500 mb-2 font-bold tracking-widest">幻灯</h2>
+                    <h3 class="text-2xl neon-pink text-fuchsia-400 mb-4 tracking-widest">古き良き3色</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        ハードウェアから制御プログラムまで、一から組み上げたオリジナルの電光掲示板。
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-green-50 border-l-4 border-green-500 p-5 rounded-r-md">
-                <h2 class="text-xl font-bold text-green-900 flex items-center">
-                    🤖 ハロ型小型ロボット
-                </h2>
-                <p class="mt-2 text-gray-700">あの「ハロ」をモチーフにした小型ロボットです。こだわりの機構と愛らしい動きをぜひ生でご覧ください。</p>
+            <!-- ハロ型ロボット -->
+            <div class="bg-black/80 border-2 border-green-900 p-6 rounded-xl flex flex-col md:flex-row-reverse items-center gap-6 haro-border backdrop-blur-sm">
+                <!-- 画像配置枠（srcの中身を実際の画像ファイル名に変更してください） -->
+                <div class="w-full md:w-1/2 aspect-video bg-gray-800 flex items-center justify-center border border-green-500 overflow-hidden relative">
+                    <img src="ここにハロの画像.jpg" alt="ハロ型ロボット" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+                    <!-- 画像がない場合は以下のテキストが表示されます -->
+                    <span class="absolute text-green-500/50">NO IMAGE</span>
+                </div>
+                <div class="w-full md:w-1/2 md:text-right">
+                    <h2 class="text-4xl text-green-400 mb-2 font-bold tracking-widest neon-green">翠球</h2>
+                    <h3 class="text-2xl neon-yellow text-yellow-400 mb-4 tracking-widest">動く！光る！ハロ！！！</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg md:text-right text-left">
+                        あの「ハロ」をモチーフにした小型ロボット。こだわりの内部機構と愛らしい動作をお楽しみください。
+                    </p>
+                </div>
             </div>
+
         </div>
 
-        <div class="mt-10 text-center text-sm text-gray-400">
-            &copy; 2026 渦虫技研
-        </div>
+        <!-- フッター -->
+        <footer class="mt-20 mb-8 text-center text-gray-500">
+            <p class="tracking-widest text-lg">Details</p>
+            <p class="mt-2">&copy; 2026 渦虫技研</p>
+        </footer>
+        
     </div>
 </body>
 </html>

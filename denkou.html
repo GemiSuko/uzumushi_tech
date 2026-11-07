@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幻灯 (電光掲示板) | 渦虫技研</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DotGothic16', sans-serif;
+            background-color: #050505;
+            color: #e5e7eb;
+        }
+        .neon-text-red {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ef4444, 0 0 30px #ef4444;
+            color: #fca5a5;
+        }
+        .neon-text-cyan {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #06b6d4, 0 0 30px #06b6d4;
+            color: #a5f3fc;
+        }
+        .image-frame-red {
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.6), inset 0 0 10px rgba(239, 68, 68, 0.4);
+            border: 2px solid #ef4444;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 flex justify-center items-start md:items-center">
+
+    <main class="w-full max-w-2xl bg-black border-2 border-red-900/50 p-6 md:p-12 rounded-xl relative shadow-[0_0_30px_rgba(239,68,68,0.1)]">
+
+        <!-- 戻るボタン -->
+        <a href="index.html" class="inline-block mb-8 text-gray-500 hover:text-red-400 transition-colors tracking-widest">
+            &lt;&lt; BACK TO TOP
+        </a>
+
+        <!-- タイトル -->
+        <div class="text-center mb-10">
+            <h1 class="text-6xl font-bold neon-text-red mb-4 tracking-widest">幻灯</h1>
+            <h2 class="text-2xl md:text-3xl neon-text-cyan">古き良き3色</h2>
+        </div>
+
+        <!-- 画像エリア -->
+        <div class="flex justify-center mb-10">
+            <!-- 掲示板なので四角い枠（rounded-sm）にしています -->
+            <div class="w-full max-w-sm aspect-square bg-gray-900 image-frame-red rounded-sm overflow-hidden relative flex items-center justify-center">
+                <!-- ▼▼▼ ここに電光掲示板の画像ファイル名を入れてください ▼▼▼ -->
+                <img src="ここに電光掲示板の画像.jpg" alt="自作電光掲示板" class="w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 flex items-center justify-center text-red-500/50 pointer-events-none">
+                    NO IMAGE
+                </div>
+            </div>
+        </div>
+
+        <!-- 説明テキスト -->
+        <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+            <p>
+                ハードウェアから制御プログラムまで、一から組み上げたオリジナルの電光掲示板。<br>
+                レトロな3色LEDが放つ、独特の温かみと表現力をお楽しみください。
+            </p>
+            
+            <!-- スペック表（内容は適当な仮置きです） -->
+            <div class="mt-8 p-5 border border-red-900/50 bg-red-900/10 rounded-md">
+                <h3 class="text-red-400 mb-3 border-b border-red-900/50 pb-2 tracking-widest">⚙️ SYSTEM SPEC</h3>
+                <ul class="list-disc list-inside text-md text-gray-400 space-y-2">
+                    <li>表示デバイス: 3色LEDドットマトリクスディスプレイ</li>
+                    <li>制御基板: 自作設計回路基板</li>
+                    <li>ソフトウェア: オリジナル描画制御プログラム搭載</li>
+                    <li>特徴: リアルタイムな文字列・アニメーション表示</li>
+                </ul>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翠球 (ハロ) | 渦虫技研</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DotGothic16', sans-serif;
+            background-color: #050505;
+            color: #e5e7eb;
+        }
+        .neon-text-green {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #22c55e, 0 0 30px #22c55e;
+            color: #bbf7d0;
+        }
+        .neon-text-yellow {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #eab308, 0 0 30px #eab308;
+            color: #fef08a;
+        }
+        .image-frame-green {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.6), inset 0 0 10px rgba(34, 197, 94, 0.4);
+            border: 2px solid #22c55e;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 flex justify-center items-start md:items-center">
+
+    <main class="w-full max-w-2xl bg-black border-2 border-green-900/50 p-6 md:p-12 rounded-xl relative shadow-[0_0_30px_rgba(34,197,94,0.1)]">
+
+        <!-- 戻るボタン -->
+        <a href="index.html" class="inline-block mb-8 text-gray-500 hover:text-green-400 transition-colors tracking-widest">
+            &lt;&lt; BACK TO TOP
+        </a>
+
+        <!-- タイトル -->
+        <div class="text-center mb-10">
+            <h1 class="text-6xl font-bold neon-text-green mb-4 tracking-widest">翠球</h1>
+            <h2 class="text-2xl md:text-3xl neon-text-yellow">動く！光る！ハロ！！！</h2>
+        </div>
+
+        <!-- 画像エリア -->
+        <div class="flex justify-center mb-10">
+            <!-- トップページと同じく丸い枠にしています -->
+            <div class="w-48 h-48 md:w-64 md:h-64 bg-gray-900 image-frame-green rounded-full overflow-hidden relative flex items-center justify-center">
+                <!-- ▼▼▼ ここにハロの画像ファイル名を入れてください ▼▼▼ -->
+                <img src="ここにハロの画像.png" alt="ハロ型ロボット" class="w-full h-full object-cover opacity-80">
+                <div class="absolute inset-0 flex items-center justify-center text-green-500/50 pointer-events-none">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- 説明テキスト -->
+        <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+            <p>
+                あの「ハロ」をモチーフにした小型ロボット。<br>
+                こだわりの内部機構により、愛らしい動作を再現しています。
+            </p>
+            
+            <!-- スペック表（内容は適当な仮置きです） -->
+            <div class="mt-8 p-5 border border-green-900/50 bg-green-900/10 rounded-md">
+                <h3 class="text-green-400 mb-3 border-b border-green-900/50 pb-2 tracking-widest">⚙️ SYSTEM SPEC</h3>
+                <ul class="list-disc list-inside text-md text-gray-400 space-y-2">
+                    <li>制御システム: マイクロコントローラ搭載</li>
+                    <li>駆動系: 小型サーボモータによる動作制御</li>
+                    <li>外装パーツ: 3Dプリンタによる独自設計</li>
+                    <li>ギミック: 人感センサ・フラップ（耳）開閉・LED発光</li>
+                </ul>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>
